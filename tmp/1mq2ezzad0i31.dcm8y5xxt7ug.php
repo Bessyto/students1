@@ -8,9 +8,9 @@
 
     <h1>Students List</h1>
     <ol>
-        <repeat group="{{@students}}" value="{{@student}}">
-            <li>{{@student['last']}}, {{@student['first']}} </li>
-        </repeat>
+        <?php foreach (($students?:[]) as $student): ?>
+            <li><?= ($student['last']) ?>, <?= ($student['first']) ?> </li>
+        <?php endforeach; ?>
     </ol>
 
 </body>

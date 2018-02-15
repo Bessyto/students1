@@ -6,26 +6,25 @@ ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 
-//Require the autoload file
+//Required files
 require_once ('vendor/autoload.php');
+require_once ('model/db-functions.php');
+
+session_start();
 
 //Create an instance of the Base
 $f3 = Base::instance();
 $f3->set("DEBUG", 3);
 
+//call the connect function from de-functions file
+$dbh = connect();
+
 //user has to run 328/hello
 //Passing Variables to a Template
-$f3->route('GET /', function() {
+$f3->route('GET /', function($f3) {
 
-    require("/home/btorresm/config.php");
-
-    try{
-        $dbh=new PDO("mysql:dbname=btorresm_grc", "btorresm_grcuser", "Lince2017");
-        echo "<p>Connected to database!</p>";
-    }
-    catch(PDOException $e) {
-        echo $e->getMessage();
-    }
+    $students = getStudents();
+    $f3->set('students', $students);
 
    //Load template
     $template = new Template();
