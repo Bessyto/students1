@@ -1,0 +1,16 @@
+{
+  "name": "btorresm/328/students1",
+  "authors":
+  [
+    {
+      "name":"Bessy Torres-Miller",
+      "email":"btorres-miller@mail.greenriver.edu"
+    }
+
+  ],
+  "require":{
+    "bcosca/fatfree-core":"dev-master"
+  }
+
+
+}
