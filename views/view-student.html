@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+    <h3>Student added successfully</h3>
+
+        <p> {{@student['first'] }} {{@student['last'] }}</p>
+    <p>SID: {{@student['sid'] }}</p>
+    <p>GPA: {{@student['gpa'] }}</p>
+<check if="{{@student['gpa'] >= 2.0}}">
+    <true><p>Passing</p></true>
+    <false><p>Failing</p></false>
+</check>
+
+
+
+</body>
+</html>

@@ -9,9 +9,12 @@
     <h1>Students List</h1>
     <ol>
         <?php foreach (($students?:[]) as $student): ?>
-            <li><?= ($student['last']) ?>, <?= ($student['first']) ?> </li>
+            <li><a href= "<?= ($BASE) ?>/summary/<?= ($student['sid']) ?>">
+                <?= ($student['last']) ?>, <?= ($student['first']) ?> </a> </li>
         <?php endforeach; ?>
     </ol>
+
+    <a href="<?= ($BASE) ?>/add">Add a Student</a>
 
 </body>
 </html>

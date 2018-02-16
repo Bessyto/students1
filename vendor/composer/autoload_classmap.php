@@ -36,6 +36,7 @@ return array(
     'Registry' => $vendorDir . '/bcosca/fatfree-core/base.php',
     'SMTP' => $vendorDir . '/bcosca/fatfree-core/smtp.php',
     'Session' => $vendorDir . '/bcosca/fatfree-core/session.php',
+    'Student' => $baseDir . '/classes/student.php',
     'Template' => $vendorDir . '/bcosca/fatfree-core/template.php',
     'Test' => $vendorDir . '/bcosca/fatfree-core/test.php',
     'UTF' => $vendorDir . '/bcosca/fatfree-core/utf.php',
